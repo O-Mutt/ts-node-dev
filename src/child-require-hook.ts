@@ -32,7 +32,7 @@ const waitForFile = function (fileName: string) {
       return
     }
     const passed = new Date().getTime() - start
-    if (timeThreshold && passed > timeThreshold) {
+    if (passed > timeThreshold) {
       throw new Error('Could not require ' + fileName)
     }
   }
